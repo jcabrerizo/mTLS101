@@ -6,14 +6,15 @@ A mTLS proof of concept and examples
 
 * [x] API endpoint to test
 * [x] Containerize app
+* [x] Swagger UI for API --> http://localhost:8080/swagger-ui
 * [ ] Configure one way TLS
+* [ ] Second http connector to expose an http port
 * [ ] Configure two way TLS --> mTLS
     * [ ] Trusting clients by their certificate
     * [ ] Trusting clients by their certificate sign by a trusted CA
 * [ ] Document certification creation
 * [ ] API for creating certificates or signing certificate signing request (csr) for new clients
-* [ ] Swagger UI for all API
+  * [ ] Swagger UI for ^ API
 * [ ] Segregate API for require mTLS only for a subset of endpoints
-* [ ] Second http connector to expose a http port
 * [ ] Create [Mkdocs](https://squidfunk.github.io/mkdocs-material/) site
     * [ ] Automate site update with a pipeline

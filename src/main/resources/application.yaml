@@ -1,6 +1,14 @@
-spring:
-  application:
-    name: "mTLS 101"
 server:
   address: 0.0.0.0
   port: ${PORT:8080}
+
+
+spring:
+  application:
+    name: "mTLS 101"
+
+# Swagger UI config
+springdoc:
+  packagesToScan: "es.cabrerizo.mtls101.rest.controller"
+  swagger-ui:
+    operationsSorter: method
