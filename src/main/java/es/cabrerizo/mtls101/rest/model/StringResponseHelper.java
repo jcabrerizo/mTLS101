@@ -1,6 +1,5 @@
-package es.cabrerizo.mtls101.rest.controller;
+package es.cabrerizo.mtls101.rest.model;
 
-import es.cabrerizo.mtls101.rest.model.StringResponse;
 import org.springframework.stereotype.Service;
 
 @Service

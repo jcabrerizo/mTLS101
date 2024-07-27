@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 
 public interface HelloApi {
+
     String APPLICATION_JSON_UTF8_VALUE_MEDIA_TYPE = "application/json;charset=UTF-8";
 
     @GetMapping(
@@ -16,9 +17,10 @@ public interface HelloApi {
     )
     @Operation(
             operationId = "hello",
-            summary = "Returns 'Hello world",
+            summary = "Returns 'Hello world'",
             description = "Simple endpoint for testing",
-            tags = { "hello" })
+            tags = {"hello"}
+    )
     default ResponseEntity<StringResponse> getHello(HttpServletRequest request) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
     }
