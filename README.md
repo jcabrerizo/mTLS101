@@ -5,7 +5,7 @@ A mTLS proof of concept and examples
 ## TODO
 
 * [x] API endpoint to test
-* [ ] Containerize app
+* [x] Containerize app
 * [ ] Configure one way TLS
 * [ ] Configure two way TLS --> mTLS
     * [ ] Trusting clients by their certificate

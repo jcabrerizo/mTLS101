@@ -32,6 +32,17 @@ dependencies {
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
+defaultTasks("clean", "build")
+
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+// disable generation of **--plain.jar
+tasks.jar {
+	enabled = false
+}
+
+springBoot {
+	buildInfo()
 }
