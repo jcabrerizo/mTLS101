@@ -4,6 +4,8 @@ server:
 
 
 spring:
+  profiles:
+    default: no-mtls
   application:
     name: "mTLS 101"
 
@@ -12,3 +14,14 @@ springdoc:
   packagesToScan: "es.cabrerizo.mtls101.rest.controller"
   swagger-ui:
     operationsSorter: method
+
+app:
+  helloStr: "Hello unsecure world"
+---
+spring.config.activate.on-profile: one-way-tls
+app:
+  helloStr: "Hello naive client"
+---
+spring.config.activate.on-profile: two-ways-tls
+app:
+  helloStr: "Hello trusted client"
