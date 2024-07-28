@@ -3,7 +3,7 @@
 #TAG=mTLS101-stub:multiarch
 #docker buildx build . --progress=plain --platform $PLATFORMS -t $REGISTRY/$TAG --push
 
-ARG API_PORT=8080
+ARG API_PORT=8081
 
 FROM --platform=$BUILDPLATFORM gradle:8.8-jdk21 AS build
 ARG TARGETPLATFORM
