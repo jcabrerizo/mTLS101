@@ -29,6 +29,7 @@ server:
     key-store: ${KEY_STORE:file:./certs/server-key-store.p12}
     key-store-password: ${KEY_STORE_PASSWORD:secret}
 app:
+  unsecure-port: 8081
   helloStr: "Hello naive client"
 
 ---
@@ -45,4 +46,5 @@ server:
 #    trust-store-password: ${TRUST_STORE_PASSWORD:secret}
 
 app:
+  unsecure-port: 8081
   helloStr: "Hello trusted client"
