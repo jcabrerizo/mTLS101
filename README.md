@@ -8,7 +8,7 @@ A mTLS proof of concept and examples
 * [x] 🐳 Containerize app → [Dockerfile](./Dockerfile)
 * [x] Swagger UI for API → http://localhost:8081/swagger-ui/index.html
 * [x] Add Spring boot profiles for configure multiple TLS scenarios
-* [ ] 🔐 Configure one way TLS
+* [x] 🔐 Configure one way TLS
   * [ ] 🔓 Second http connector to expose an http port
 * [ ] Configure two way TLS → mTLS
     * [ ] Trusting clients by their certificate

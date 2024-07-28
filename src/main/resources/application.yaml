@@ -1,7 +1,8 @@
 server:
   address: 0.0.0.0
   port: ${PORT:8081}
-
+  compression:
+    enabled: true
 
 spring:
   profiles:
@@ -17,11 +18,31 @@ springdoc:
 
 app:
   helloStr: "Hello unsecure world"
+
 ---
 spring.config.activate.on-profile: one-way-tls
+
+server:
+  port: ${PORT:8443}
+  ssl:
+    key-store-type: PKCS12
+    key-store: ${KEY_STORE:file:./certs/server-key-store.p12}
+    key-store-password: ${KEY_STORE_PASSWORD:secret}
 app:
   helloStr: "Hello naive client"
+
 ---
 spring.config.activate.on-profile: two-ways-tls
+
+server:
+  port: ${PORT:8443}
+#  ssl:
+#    key-store-type: PKCS12
+#    key-store: ${KEY_STORE:file:./certs/server-key-store.p12}
+#    key-store-password: ${KEY_STORE_PASSWORD:secret}
+#    client-auth: ${CLIENT_AUTH:need} # none / want / need
+#    trust-store: ${TRUST_STORE:file:./certs/server-truststore.p12}
+#    trust-store-password: ${TRUST_STORE_PASSWORD:secret}
+
 app:
   helloStr: "Hello trusted client"
